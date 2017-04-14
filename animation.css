@@ -26,20 +26,6 @@ svg{
   -moz-transform: rotate(-89deg) translateX(-190px);
 }
 
-.chart {
-	position: relative;
-  display: inline-block;
-  color: #999;
-  font-size: 20px;
-  text-align: center;
-}
-
-.chart[data-percent='75'] .outer {
-  stroke-dashoffset: 133;
-  -webkit-animation: show75 2s;
-  animation: show75 2s;
-}
-
 @-webkit-keyframes show75 {
   from {
     stroke-dashoffset: 537;
