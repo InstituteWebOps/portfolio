@@ -268,7 +268,6 @@ body {
   z-index: 999999;
 }
 
-<<<<<<< HEAD
 
 .loader {
   position: fixed;
@@ -277,11 +276,9 @@ body {
   width: 100%;
   height: 100%;
   z-index: 9999;
-  background: url('preloader.gif') 50% 50% no-repeat rgb(249,249,249);
+  background: url('../preloader.gif') 50% 50% no-repeat rgb(249,249,249);
 }
 
-=======
->>>>>>> c1b4dd326d37d9020309e08a28bc09d947893805
 .spinner {
   width: 40px;
   height: 40px;
