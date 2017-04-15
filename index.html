@@ -12,12 +12,23 @@
   <link href="css/style.css" rel="stylesheet" type="text/css">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/set1.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Armata" rel="stylesheet"> 
+<!--   <link rel="stylesheet" type="text/css" href="css/demo.css" />
+ -->  <link rel="stylesheet" type="text/css" href="css/effect2.css" />
+ <link href="https://fonts.googleapis.com/css?family=Armata" rel="stylesheet"> 
+    <script src="js/modernizr.custom.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-<div class="loader"></div>
+<body>
+<div class="ip-container" id="ip-container">
+<header class="ip-header">
+        <div class="ip-loader">
+          <svg class="ip-inner" width="60px" height="60px" viewBox="0 0 80 80">
+            <path class="ip-loader-circlebg" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+            <path id="ip-loader-circle" class="ip-loader-circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+          </svg>
+        </div>
+      </header>
 <nav class="navbar navbar-default navbar-fixed-top" id="navbar">
   <div class="container">
     <div class="navbar-header">
@@ -40,8 +51,7 @@
 </nav>
 
 <div class="jumbotron text-center" style="height: 300px">
-  <img src="images/logo.png" alt="logo" width="300"></img> 
-  
+  <img src="images/logo.png" alt="logo" width="300"></img>
 </div>
 
 
@@ -244,7 +254,7 @@ institute and maintaing the ethics, it is a well built site for our academic nee
 <!-- Container (About Section) -->
 
 <div id="about" class="container-fluid">
-  <div class="row slideanim">
+  <div class="row slideranim">
 
     <div class="col-sm-4">
     <br><br>
@@ -369,7 +379,7 @@ specified mail address. It has a very professional look pleasing anyone. </p>
       </div>
     </div>
 </div>
-
+</form>
 <!-- Container (Pricing Section) -->
 
 <!-- Container (Contact Section) -->
@@ -485,7 +495,8 @@ specified mail address. It has a very professional look pleasing anyone. </p>
             <div class="social-buttons">
               <a href="#" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
               <a href="#" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
-              <a href="#" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>            </div>
+              <a href="#" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
+            </div>
           </div>
         </div>
       </div>
@@ -586,7 +597,7 @@ specified mail address. It has a very professional look pleasing anyone. </p>
         <div class="col-sm-4 col-md-3">
           <div class="team-member">
             <img class="thumb img-circle" src="images/default.png" alt="Natali Oldman">
-            <h4>Kaushik Karambhelkar</h4>
+            <h4>Kaushik Karambelkar</h4>
             <span class="text-muted">WebOps Coordinator</span>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             <div class="social-buttons">
@@ -642,88 +653,12 @@ specified mail address. It has a very professional look pleasing anyone. </p>
 
     </div>	
    </div>
+
+   <script src="js/classie.js"></script>
+    <script src="js/pathLoader.js"></script>
+    <script src="js/main.js"></script>
    
-<script>
-//#C40003 red: #363636 grey
-$(document).ready(function(){
-
-  window.onload = function() {
-      $(".loader").fadeOut("slow");
-  }
-
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-
-
-    $('div.box').mouseover(function() {
-      console.log("mouseover");
-    });
-
-
-  });
- 
-  $(window).scroll(function() {
-    $(".slideanim").each(function(){
-      var pos = $(this).offset().top;
-
-      var winTop = $(window).scrollTop();
-        if (pos < winTop + 600) {
-          $(this).addClass("slide");
-        }
-    });
-  });
-
-  var scroll_start = 0;
-   var startchange = $('#works');
-   var offset = startchange.offset();
-   if (startchange.length){
-     $(document).scroll(function() { 
-        scroll_start = $(this).scrollTop();
-        if(scroll_start > offset.top) {
-            $('#navbar').css('background-color', '#363636');
-            $('.navbar-default .navbar-nav li a').css('color','#fff');
-            $('.navbar-default .navbar-nav li a').css('background-color','#363636');
-            $('.navbar-default .navbar-nav>li.active>a').css('color','#363636');
-            $('.navbar-default .navbar-nav>li.active>a').css('background-color','#fff');
-  // .navbar-nav li a:hover, .navbar-nav li.active a {
-  //     color: #fff ;
-  //     background-color: #363636;
-  // }
-         } else {
-            $('#navbar').css('background-color', 'transparent');
-            $('.navbar-default .navbar-nav li a').css('color','#363636');
-            $('.navbar-default .navbar-nav li a').css('background-color','transparent');
-            $('.navbar-default .navbar-nav>li.active>a').css('color','#fff');
-            $('.navbar-default .navbar-nav>li.active>a').css('background-color','#363636');
-         }
-     });
-    }
-})
-
-
- $('#box').mouseover(function() {
-    
-    console.log("mouseover");
-  });
-</script>
+<script src="js/mainjs.js"></script>
 
 </body>
 <!--
