@@ -15,12 +15,24 @@
 <!--   <link rel="stylesheet" type="text/css" href="css/demo.css" />
  -->  <link rel="stylesheet" type="text/css" href="css/effect2.css" />
  <link href="https://fonts.googleapis.com/css?family=Armata" rel="stylesheet"> 
-    <script src="js/modernizr.custom.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
+<script src="js/pace.min.js"></script>
+<script src="js/modernizr.custom.js"></script>
 
+<script type="text/javascript" src="js/mainjs.js"></script>
+<script type="text/javascript" src="js/classie.js"></script>
+<script type="text/javascript" src="js/pathLoader.js"></script>
+<!-- <script type="text/javascript">
+           Pace.on("update", function(percent){
+            console.log(percent);
+            });
+         </script> -->
 </head>
 <body>
+
 <div class="ip-container" id="ip-container">
 <header class="ip-header">
         <div class="ip-logo text-center">
@@ -33,6 +45,8 @@
           </svg>
         </div>
       </header>
+      <script type="text/javascript" src="js/main.js"></script>
+         
 <nav class="navbar navbar-default navbar-fixed-top" id="navbar">
   <div class="container">
     <div class="navbar-header">
@@ -54,22 +68,49 @@
   </div>
 </nav>
 
-<div class="jumbotron text-center" style="height: 300px">
+<div class="jumbotron text-center" id="myPage" style="height: 300px">
   <!-- <img src="images/logo.png" alt="logo" width="300"></img> -->
+
 </div>
 
+<div class="laptop">
+  <div id="laptop" class="laptop_a">
+    <div id="front" class="front">
+          <section id="screen" class="screen-off">
+            <p class="header" style="
+    margin: 0;
+    text-align: center;
+    font-size: 2em;
+">Terminal &hearts;</p>
+            <span id="type-it"></span>
+            <a href="#about" class="arrow"><p>&#x21E9;</p></a>
+          </section>                                               
+    </div>
+    <div class="back">
+    </div>
+    <div class="top"></div>
+  </div>
+  <div class="bottom"></div>
+</div>
+<script type="text/javascript">
+//   $('.type-it').typeIt({
+//      strings: ['This is my string!']
+// });
+// call .typeIt() on my element and set global options
 
+</script>
 
 <div id="works" class="container-fluid text-center">
   <div class="row slideanim">
+  <h2>Our Works</h2><br>
   <div class="grid">
   <figure class="effect-zoe">
     <img src="images/books.jpg" alt="course"/>
     <figcaption>
       <h2>Course <span>Review</span></h2>
       <p class="icon-links">
-        <a href="#"><i class="fa fa-github"></i></a>
-        <a href="#"><i class="fa fa-external-link"></i></a>
+        <a href="https://github.com/Sourav27/reviewCourses" target="_blank"><i class="fa fa-github"></i></a>
+        <a href="https://students.iitm.ac.in/reviewCourses/" target="_blank"><i class="fa fa-external-link"></i></a>
         <a href="#"><i class="fa fa-heart-o"></i></a>
       </p>
       <div class="description"><div class="web-logo"><img src="images/coursesreview_new.png" class="icon"></div>
@@ -85,8 +126,8 @@ institute and maintaing the ethics, it is a well built site for our academic nee
     <figcaption>
       <h2>Feedback <span>Portal</span></h2>
       <p class="icon-links">
-        <a href="#"><i class="fa fa-github"></i></a>
-        <a href="#"><i class="fa fa-external-link"></i></a>
+        <a href="https://github.com/InstituteWebOps/feedback" target="_blank"><i class="fa fa-github"></i></a>
+        <a href="https://students.iitm.ac.in/feedback/" target="_blank"><i class="fa fa-external-link"></i></a>
         <a href="#"><i class="fa fa-heart-o"></i></a>
       </p>
       <div class="description"><div class="web-logo"><img src="images/feedback_new.png" class="icon"></div>
@@ -102,8 +143,8 @@ institute and maintaing the ethics, it is a well built site for our academic nee
     <figcaption>
       <h2>Mess-Facilities <span>Portal</span></h2>
       <p class="icon-links">
-        <a href="#"><i class="fa fa-github"></i></a>
-        <a href="#"><i class="fa fa-external-link"></i></a>
+        <a href="https://github.com/Sourav27/Mess-Facilities-Portal" target="_blank"><i class="fa fa-github"></i></a>
+        <a href="https://students.iitm.ac.in/mess-facilities/" target="_blank"><i class="fa fa-external-link"></i></a>
         <a href="#"><i class="fa fa-heart-o"></i></a>
       </p>
       <div class="description"><div class="web-logo"><img src="images/messfacilities_new.png" class="icon"></div>
@@ -119,8 +160,8 @@ institute and maintaing the ethics, it is a well built site for our academic nee
     <figcaption>
       <h2>Insti <span>Maps</span></h2>
       <p class="icon-links">
-        <a href="#"><i class="fa fa-github"></i></a>
-        <a href="#"><i class="fa fa-external-link"></i></a>
+        <a href="https://github.com/InstituteWebOps/maps" target="_blank"><i class="fa fa-github"></i></a>
+        <a href="https://students.iitm.ac.in/maps/" target="_blank"><i class="fa fa-external-link"></i></a>
         <a href="#"><i class="fa fa-heart-o"></i></a>
       </p>
       <div class="description"><div class="web-logo"><img src="images/maps_new.png" class="icon"></div>
@@ -137,7 +178,7 @@ institute and maintaing the ethics, it is a well built site for our academic nee
       <h2>Election <span>Discussions</span></h2>
       <p class="icon-links">
         <a href="#"><i class="fa fa-github"></i></a>
-        <a href="#"><i class="fa fa-external-link"></i></a>
+        <a href="https://students.iitm.ac.in/election17" target="_blank"><i class="fa fa-external-link"></i></a>
         <a href="#"><i class="fa fa-heart-o"></i></a>
       </p>
       <div class="description"><div class="web-logo"><img src="images/elections_new.png" class="icon"></div>
@@ -153,8 +194,8 @@ institute and maintaing the ethics, it is a well built site for our academic nee
     <figcaption>
       <h2>IITM <span>Video</span></h2>
       <p class="icon-links">
-        <a href="#"><i class="fa fa-github"></i></a>
-        <a href="#"><i class="fa fa-external-link"></i></a>
+        <a href="https://github.com/InstituteWebOps/iitm_video" target="_blank"><i class="fa fa-github"></i></a>
+        <a href="https://students.iitm.ac.in/iitm_video" target="_blank"><i class="fa fa-external-link"></i></a>
         <a href="#"><i class="fa fa-heart-o"></i></a>
       </p>
       <div class="description"><div class="web-logo"><img src="images/iitmvideo_new.png" class="icon"></div>
@@ -265,10 +306,10 @@ institute and maintaing the ethics, it is a well built site for our academic nee
       <span class="glyphicon glyphicon-signal logo" style="float:left;"></span>
     </div>
     <div class="col-sm-8">
-      <h2>About </h2><br>
+      <h2>About Us</h2><br>
       <h4>The Institute Web and Mobile Operations Team aka Insti WebOps takes care of all student related web operations in IIT Madras</h4><br>
       <p>We've worked closely with EML, CFI and several other student bodies in the institute for developing and hosting their websites. Started as small team, we've gained recognition over the years and went on to become part of the Student General Body, working directly under the Dean of Students and Student General Secretary. We're also involved in mobile application development. Insti life was made a lot easier for students after we've released our IIT Madras Students app - a one stop app integrating all student related services.  </p>
-      <br><a href="http://www.coffeecup.com"><button class="btn btn-default btn-lg">Get in Touch</button></a>
+      <br><a href="https://students.iitm.ac.in" target="_blank"><button class="btn btn-default btn-lg">Find us Here</button></a>
     </div>
     
   </div>
@@ -278,7 +319,7 @@ institute and maintaing the ethics, it is a well built site for our academic nee
 <!-- Container (Services Section) -->
 
 
-
+<!-- 
 
 <div id="about" class="container-fluid">
   <div class="row slideanim">
@@ -357,7 +398,7 @@ specified mail address. It has a very professional look pleasing anyone. </p>
     
   </div>
 </div>
-
+ -->
 
 <!-- Container (Portfolio Section) -->
 <div id="suggest" class="container-fluid text-center bg-grey">
@@ -391,28 +432,61 @@ specified mail address. It has a very professional look pleasing anyone. </p>
   <div class="row slideanim">
       <!-- Block Header -->
       <div class="page-header text-center">
+        <h2>The Upcoming Team</h2>
+      </div><!-- Block Header End -->
+      
+      <!-- Content -->
+      <div class="row space-top">
+        <div class="col-sm-6">
+          <div class="team-member">
+            <img class="thumb img-circle" src="images/default.png" alt="Edward Jones">
+            <h4>Aakarsh Chopra</h4>
+            <span class="text-muted">New WebOps Core</span>
+            <!--p>Description here</p-->
+            <div class="social-buttons">
+              <a href="#" target="_blank" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
+            </div>
+          </div>
+        </div>
+
+          <div class="col-sm-6">
+          <div class="team-member">
+            <img class="thumb img-circle" src="images/default.png" alt="James Lewis">
+            <h4>Omkar Patil</h4>
+            <span class="text-muted">New MobOps Core</span>
+            <!--p>Description here</p-->
+            <div class="social-buttons">
+              <a href="#" target="_blank" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
+             </div>
+          </div>
+        </div>
+      <div class="page-header text-center">
         <h2>Core Team</h2>
       </div><!-- Block Header End -->
       
       <!-- Content -->
       <div class="row space-top">
-        <div class="col-sm-4">
+        <div class="col-sm-6">
           <div class="team-member">
-            <img class="thumb img-circle" src="images/default.png" alt="James Lewis">
+            <img class="thumb img-circle" src="images/members/sourav.jpg" alt="Sourav Debnath">
             <h4>Sourav Debnath</h4>
             <span class="text-muted">WebOps Core</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <!--p>Description here</p-->
             <div class="social-buttons">
-              <a href="#" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
-              <a href="#" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
-              <a href="#" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>            </div>
+              <a href="https://www.linkedin.com/in/souravdebnath/" target="_blank" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
+              <a href="https://github.com/Sourav27" target="_blank" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
+              <a href="https://www.facebook.com/souravdebnath27" target="_blank" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>            </div>
           </div>
           <!-- <div class="thumbnail with-caption">
             <img src="images/default.png" alt="Johnathan Doe">
             <div class="caption">
               <h4>Johnathan Doe</h4>
               <span class="text-muted">Co-Founder, CEO</span>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores mollitia magnam quae.</p>
+              <p>Description here Maiores mollitia magnam quae.</p>
               <div class="social-buttons">
                 <a href="#" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
               <a href="#" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
@@ -420,28 +494,28 @@ specified mail address. It has a very professional look pleasing anyone. </p>
             </div>
           </div> -->
         </div>
-        <div class="col-sm-4">
+        <!-- <div class="col-sm-4">
           <div class="team-member">
             <img class="thumb img-circle" src="images/default.png" alt="James Lewis">
-            <h4>Saikumar Yedugiri</h4>
+            <h4>Saikumar Yadugiri</h4>
             <span class="text-muted">WebOps Core</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            
             <div class="social-buttons">
-              <a href="#" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
-              <a href="#" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
-              <a href="#" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>            </div>
+              <a href="https://in.linkedin.com/in/saikumar-yadugiri" target="_blank" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
+              <a href="https://github.com/ee14b067" target="_blank" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>            </div>
           </div>
-        </div>
-        <div class="col-sm-4">
+        </div> -->
+        <div class="col-sm-6">
           <div class="team-member">
-            <img class="thumb img-circle" src="images/default.png" alt="James Lewis">
+            <img class="thumb img-circle" src="images/members/praneeth.jpg" alt="Sai Praneeth">
             <h4>Sai Praneeth</h4>
             <span class="text-muted">MobOps Core</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <!--p>Description here</p-->
             <div class="social-buttons">
-              <a href="#" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
-              <a href="#" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
-              <a href="#" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>            </div>
+              <a href="https://in.linkedin.com/in/devunuri-sai-praneeth-0b1987b8" target="_blank" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
+              <a href="https://www.facebook.com/sai.praneeth.923" target="_blank" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>            </div>
           </div>
         </div>
       </div>
@@ -456,11 +530,11 @@ specified mail address. It has a very professional look pleasing anyone. </p>
             <img class="thumb img-circle" src="images/default.png" alt="James Lewis">
             <h4>Chaturasan Ramineni</h4>
             <span class="text-muted">WebOps Super Coordinator</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <!--p>Description here</p-->
             <div class="social-buttons">
-              <a href="#" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
-              <a href="#" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
-              <a href="#" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>            
+              <a href="#" target="_blank" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>            
             </div>
           </div>
         </div>
@@ -469,11 +543,11 @@ specified mail address. It has a very professional look pleasing anyone. </p>
             <img class="thumb img-circle" src="images/default.png" alt="Angela Williams">
             <h4>Mridul Mohan</h4>
             <span class="text-muted">WebOps Super Coordinator</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <!--p>Description here</p-->
             <div class="social-buttons">
-              <a href="#" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
-              <a href="#" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
-              <a href="#" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
             </div>
           </div>
         </div>
@@ -482,11 +556,11 @@ specified mail address. It has a very professional look pleasing anyone. </p>
             <img class="thumb img-circle" src="images/default.png" alt="Edward Jones">
             <h4>Aakarsh Chopra</h4>
             <span class="text-muted">WebOps Coordinator</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <!--p>Description here</p-->
             <div class="social-buttons">
-              <a href="#" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
-              <a href="#" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
-              <a href="#" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
             </div>
           </div>
         </div>
@@ -495,11 +569,11 @@ specified mail address. It has a very professional look pleasing anyone. </p>
             <img class="thumb img-circle" src="images/default.png" alt="Natali Oldman">
             <h4>Prasad Chaudhari</h4>
             <span class="text-muted">WebOps Coordinator</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <!--p>Description here</p-->
             <div class="social-buttons">
-              <a href="#" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
-              <a href="#" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
-              <a href="#" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
             </div>
           </div>
         </div>
@@ -510,11 +584,11 @@ specified mail address. It has a very professional look pleasing anyone. </p>
             <img class="thumb img-circle" src="images/default.png" alt="James Lewis">
             <h4>Shyam Shankar H R</h4>
             <span class="text-muted">WebOps Coordinator</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <!--p>Description here</p-->
             <div class="social-buttons">
-              <a href="#" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
-              <a href="#" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
-              <a href="#" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
             </div>
           </div>
         </div>
@@ -523,11 +597,11 @@ specified mail address. It has a very professional look pleasing anyone. </p>
             <img class="thumb img-circle" src="images/default.png" alt="Angela Williams">
             <h4>Sasank G</h4>
             <span class="text-muted">WebOps Coordinator</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <!--p>Description here</p-->
             <div class="social-buttons">
-              <a href="#" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
-              <a href="#" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
-              <a href="#" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
             </div>
           </div>
         </div>
@@ -536,11 +610,11 @@ specified mail address. It has a very professional look pleasing anyone. </p>
             <img class="thumb img-circle" src="images/default.png" alt="Edward Jones">
             <h4>Varun Goyal</h4>
             <span class="text-muted">WebOps Coordinator</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <!--p>Description here</p-->
             <div class="social-buttons">
-              <a href="#" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
-              <a href="#" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
-              <a href="#" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
             </div>
           </div>
         </div>
@@ -549,11 +623,11 @@ specified mail address. It has a very professional look pleasing anyone. </p>
             <img class="thumb img-circle" src="images/default.png" alt="Natali Oldman">
             <h4>Vemuri Sai Siddhartha</h4>
             <span class="text-muted">WebOps Coordinator</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <!--p>Description here</p-->
             <div class="social-buttons">
-              <a href="#" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
-              <a href="#" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
-              <a href="#" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
             </div>
           </div>
         </div>
@@ -564,11 +638,11 @@ specified mail address. It has a very professional look pleasing anyone. </p>
             <img class="thumb img-circle" src="images/default.png" alt="James Lewis">
             <h4>Haran Rajkumar</h4>
             <span class="text-muted">WebOps Coordinator</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <!--p>Description here</p-->
             <div class="social-buttons">
-              <a href="#" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
-              <a href="#" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
-              <a href="#" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
             </div>
           </div>
         </div>
@@ -577,11 +651,11 @@ specified mail address. It has a very professional look pleasing anyone. </p>
             <img class="thumb img-circle" src="images/default.png" alt="Angela Williams">
             <h4>Sanjeev Grampurohit</h4>
             <span class="text-muted">WebOps Coordinator</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <!--p>Description here</p-->
             <div class="social-buttons">
-              <a href="#" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
-              <a href="#" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
-              <a href="#" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
             </div>
           </div>
         </div>
@@ -590,11 +664,11 @@ specified mail address. It has a very professional look pleasing anyone. </p>
             <img class="thumb img-circle" src="images/default.png" alt="Edward Jones">
             <h4>P. Surya Kumar</h4>
             <span class="text-muted">WebOps Coordinator</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <!--p>Description here</p-->
             <div class="social-buttons">
-              <a href="#" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
-              <a href="#" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
-              <a href="#" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
             </div>
           </div>
         </div>
@@ -603,11 +677,11 @@ specified mail address. It has a very professional look pleasing anyone. </p>
             <img class="thumb img-circle" src="images/default.png" alt="Natali Oldman">
             <h4>Kaushik Karambelkar</h4>
             <span class="text-muted">WebOps Coordinator</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <!--p>Description here</p-->
             <div class="social-buttons">
-              <a href="#" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
-              <a href="#" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
-              <a href="#" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
             </div>
           </div>
         </div>
@@ -618,11 +692,11 @@ specified mail address. It has a very professional look pleasing anyone. </p>
             <img class="thumb img-circle" src="images/default.png" alt="James Lewis">
             <h4>Omkar Patil</h4>
             <span class="text-muted">MobOps Coordinator</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <!--p>Description here</p-->
             <div class="social-buttons">
-              <a href="#" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
-              <a href="#" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
-              <a href="#" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
              </div>
           </div>
         </div>
@@ -631,11 +705,11 @@ specified mail address. It has a very professional look pleasing anyone. </p>
             <img class="thumb img-circle" src="images/default.png" alt="Angela Williams">
             <h4>Sathwik Chadaga</h4>
             <span class="text-muted">MobOps Coordinator</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <!--p>Description here</p-->
             <div class="social-buttons">
-              <a href="#" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
-              <a href="#" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
-              <a href="#" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
             </div>
           </div>
         </div>
@@ -644,25 +718,57 @@ specified mail address. It has a very professional look pleasing anyone. </p>
             <img class="thumb img-circle" src="images/default.png" alt="Edward Jones">
             <h4>Anurag Shrivastava</h4>
             <span class="text-muted">MobOps Coordinator</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <!--p>Description here</p-->
             <div class="social-buttons">
-              <a href="#" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
-              <a href="#" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
-              <a href="#" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
+              <a href="#" target="_blank" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
             </div>
           </div>
         </div>
       </div>
+      <!-- Block Header -->
+      <div class="page-header text-center">
+        <h2>The Godfathers</h2>
+      </div><!-- Block Header End -->
+      
+      <!-- Content -->
+      <div class="row space-top">
+        <div class="col-sm-6">
+          <div class="team-member">
+            <img class="thumb img-circle" src="images/members/jsk.jpg" alt="JSK">
+            <h4>Jaya Saikiran</h4>
+            <span class="text-muted">Ex-WebOps Core</span>
+            <!--p>Description here</p-->
+            <div class="social-buttons">
+              <a href="https://www.linkedin.com/in/jsk1995/" target="_blank" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
+              <a href="https://github.com/saikiran321" target="_blank" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
+              <a href="https://www.facebook.com/jaya.saikiran" target="_blank" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
+            </div>
+          </div>
+        </div>
+
+          <div class="col-sm-6">
+          <div class="team-member">
+            <img class="thumb img-circle" src="images/members/srikar.jpg" alt="Srikar P">
+            <h4>Srikar Pothumahanti</h4>
+            <span class="text-muted">Ex-WebOps Core</span>
+            <!--p>Description here</p-->
+            <div class="social-buttons">
+              <a href="https://www.linkedin.com/in/srikar-pothumahanti-b92177b4/" target="_blank" class="social-btn sb-linkedin sb-sm"><i class="fa fa-linkedin"></i></a>
+              <a href="https://github.com/srikarrohit" target="_blank" class="social-btn sb-github sb-sm"><i class="fa fa-github-alt"></i></a>
+              <a href="https://www.facebook.com/srikarrohitiitm" target="_blank" class="social-btn sb-facebook sb-sm"><i class="fa fa-facebook"></i></a>
+             </div>
+          </div>
+        </div>
       <!-- Content End -->
 
     </div>	
    </div>
 
-   <script type="text/javascript" src="js/classie.js"></script>
-   <script type="text/javascript" src="js/pathLoader.js"></script>
-   <script type="text/javascript" src="js/main.js"></script>
-   <script type="text/javascript" src="js/mainjs.js"></script>
+  
 </body>
+ <footer>Made with <i class="fa fa-heart" style="color:#C40003;font-size: 1em !important;"></i> by Institute WebOps</footer>
 <!--
 <div class="spinner-wrapper">
 <div class="spinner"></div>

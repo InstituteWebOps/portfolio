@@ -4,9 +4,10 @@ $(document).ready(function(){
   window.onload = function() {
       $(".loader").fadeOut("slow");
   }
+  
 
   // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+  $(".navbar a, footer a[href='#myPage'], .laptop a").on('click', function(event) {
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
       // Prevent default anchor click behavior
@@ -34,16 +35,16 @@ $(document).ready(function(){
 
   });
  
-  $(window).scroll(function() {
-    $(".slideanim").each(function(){
-      var pos = $(this).offset().top;
+  // $(window).scroll(function() {
+  //   $(".slideanim").each(function(){
+  //     var pos = $(this).offset().top;
 
-      var winTop = $(window).scrollTop();
-        if (pos < winTop + 600) {
-          $(this).addClass("slide");
-        }
-    });
-  });
+  //     var winTop = $(window).scrollTop();
+  //       if (pos < winTop + 600) {
+  //         $(this).addClass("slide");
+  //       }
+  //   });
+  // });
 
   var scroll_start = 0;
    var startchange = $('#works');

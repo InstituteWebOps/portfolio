@@ -12,6 +12,7 @@
 
 	var support = { animations : Modernizr.cssanimations },
 		container = document.getElementById( 'ip-container' ),
+		laptop = document.getElementById( 'laptop' ),
 		header = container.querySelector( 'header.ip-header' ),
 		loader = new PathLoader( document.getElementById( 'ip-loader-circle' ) ),
 		animEndEventNames = { 'WebkitAnimation' : 'webkitAnimationEnd', 'OAnimation' : 'oAnimationEnd', 'msAnimation' : 'MSAnimationEnd', 'animation' : 'animationend' },
@@ -43,18 +44,56 @@
 
 	function startLoading() {
 		// simulate loading something..
+		Pace.restart();
 		var simulationFn = function(instance) {
-			var progress = 0,
-				interval = setInterval( function() {
-					progress = Math.min( progress + Math.random() * 0.1, 1 );
+			var progress = 0;
+				// interval = setInterval( function() {
+				// 	progress = Math.min( progress + Math.random() * 0.1, 1 );
 
-					instance.setProgress( progress );
+				// 	instance.setProgress( progress );
+
+				// 	// reached the end
+				// 	if( progress === 1 ) {
+				// 		classie.remove( container, 'loading' );
+				// 		classie.add( container, 'loaded' );
+				// 		clearInterval( interval );
+
+				// 		var onEndHeaderAnimation = function(ev) {
+				// 			if( support.animations ) {
+				// 				if( ev.target !== header ) return;
+				// 				this.removeEventListener( animEndEventName, onEndHeaderAnimation );
+				// 			}
+
+				// 			classie.add( document.body, 'layout-switch' );
+				// 			window.removeEventListener( 'scroll', noscroll );
+				// 		};
+
+				// 		if( support.animations ) {
+				// 			header.addEventListener( animEndEventName, onEndHeaderAnimation );
+				// 		}
+				// 		else {
+				// 			onEndHeaderAnimation();
+				// 		}
+				// 	}
+				// }, 80 );
+				Pace.on("update", function(percent){
+      				progress= Math.min (percent*0.01,1);
+      				// progress = Math.min( progress + Math.random() * 0.1, 1 );
+					// console.log(percent);
+					if(progress>0.96 && progress<1){
+						instance.setProgress(0.96+progress*0.02);
+					}
+					else{
+						instance.setProgress( progress );	
+					}
+					
 
 					// reached the end
 					if( progress === 1 ) {
 						classie.remove( container, 'loading' );
 						classie.add( container, 'loaded' );
-						clearInterval( interval );
+						
+						// clearInterval( interval );
 
 						var onEndHeaderAnimation = function(ev) {
 							if( support.animations ) {
@@ -63,6 +102,52 @@
 							}
 
 							classie.add( document.body, 'layout-switch' );
+							$("#laptop").addClass('laptop_def');
+							$("#front").addClass('front_def');
+							$("#screen").removeClass('screen-off');
+							$('#type-it').typeIt({
+							     speed: 100,
+							     // lifeLike: true,
+							     autoStart: false,
+							     startDelay: 500,
+							     strings:'$ '
+							     // callback(): function() {
+							     //       $('#typeit-box-code-link').addClass('is-visible');
+							     // }
+							})
+							.tiPause(1200)
+							.tiType('Hello! ✋')
+
+							.tiBreak()
+							.tiType('$ ')
+							.tiPause(500)
+							// .tiType('A jQuery pl')
+							// .tiPause(500)
+							// .tiDelete(12)
+							// .tiBreak()
+							// .tiPause(500)
+							.tiType('We are the <strong>Institute Web Operations</strong> Club')
+							.tiPause(500)
+							.tiDelete(4)
+							.tiType('Team.')
+
+							// .tiDelete(11)
+							// .tiPause(350)
+							// .tiType('on the ')
+							// .tiPause(600)
+							// .tiType('<em>planet.</em>');
+							.tiBreak()
+							.tiType('$ ')
+							.tiPause(500)
+							.tiType('We transform ideas into digital form to')
+							.tiSettings({speed: 700})
+							.tiType('...')
+
+							.tiBreak()
+							.tiSettings({speed: 100})
+							.tiType('$ ')
+							.tiPause(500)
+							.tiType('provide ease to insti junta through the web. ✌')
 							window.removeEventListener( 'scroll', noscroll );
 						};
 
@@ -73,7 +158,16 @@
 							onEndHeaderAnimation();
 						}
 					}
-				}, 80 );
+      			});
+    //   			interval = setInterval( function() {
+				// 	progress = Math.min( progress + Math.random() * 0.1, 1 );
+
+				// 	instance.setProgress( progress );
+				// },80);
+      			
+				// interval = setInterval( function() {
+					
+				// }, 80 );
 		};
 
 		loader.setProgressFn( simulationFn );
