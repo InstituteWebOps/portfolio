@@ -147,7 +147,7 @@
 							.tiSettings({speed: 100})
 							.tiType('$ ')
 							.tiPause(500)
-							.tiType('provide ease to insti junta through the web. ✌')
+							.tiType('provide facilities to insti junta through the web. ✌')
 							window.removeEventListener( 'scroll', noscroll );
 						};
 
