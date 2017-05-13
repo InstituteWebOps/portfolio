@@ -17,6 +17,32 @@ body {
       font-weight: 400;
       margin-bottom: 30px;
   }  
+  a{
+    outline: none;
+  }
+  /*Pace.js loader*/
+  .pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  background: #c60003;
+  position: fixed;
+  z-index: 11000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 2px;
+}
   .row{
     margin-right: auto;
     margin-left: auto;
@@ -110,14 +136,14 @@ body {
       color: #fff ;
   }
  
-  .slideanim {visibility:hidden;}
+  /*.slideanim {visibility:hidden;}
   .slide {
       animation-name: slide;
       -webkit-animation-name: slide;
       animation-duration: 1s;
       -webkit-animation-duration: 1s;
       visibility: visible;
-  }
+  }*/
   @keyframes slide {
     0% {
       opacity: 0;
@@ -308,4 +334,260 @@ body {
     transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
     -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
   }
+}
+
+.laptop {
+  -webkit-perspective: 1800px;
+  -moz-perspective: 1800px;
+  perspective: 1800px;
+  position: relative;
+  top: 50%;
+  margin: 0 auto;
+  /*margin-top: -134px;*/
+  margin-bottom: 26em;
+  width: 425px;
+}
+
+.laptop_a {
+  position: absolute;
+  width: 100%;
+  height: 269px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transform: rotateX(-81deg);
+  -moz-transform: rotateX(-81deg);
+  -webkit-transform: rotateX(-79deg);
+  -webkit-transition: -webkit-transform .20s;
+  -moz-transition: -moz-transform .20s;
+  transition: transform .20s;
+  transform-origin: 100% 100%;
+}
+
+.laptop_def{
+  animation: spin 1.5s linear;
+  -webkit-animation: spin 1.5s ease-in;
+  -moz-animation: spin 1.5s linear;
+  -o-animation: spin 1.5s linear;
+  animation-fill-mode: forwards;
+  
+  
+}
+
+.laptop_a > div,
+.front > div {
+  display: inline-block;
+  position: absolute;
+  /*left: 10px;*/
+}
+
+.front {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-origin: 0% 50%;
+  -moz-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  -webkit-transition: -webkit-transform .20s;
+  -moz-transition: -moz-transform .20s;
+  transition: transform .20s;
+  -webkit-transform: translate3d(0,0,1px);
+  -moz-transform: translate3d(0,0,1px);
+  transform: translate3d(0,0,1px);
+  z-index: 10;
+  
+}
+.front_def{
+  -webkit-animation: bg_n 1.5s ease-in;
+  -moz-animation: bg_n 1.5s ease-in;
+  -animation: bg_n 1.5s ease-in;
+  animation-fill-mode: forwards
+}
+
+.front > div {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  top: 0;
+  left: 0;
+  background: #ccc;
+}
+
+.front, .back, .front  {
+  width: 100%;
+  border: 2px solid #777;
+  border-radius: 1em;
+  padding: 1em;
+
+}
+.front section { 
+  width: 100%; 
+  -webkit-animation: opc 2.0s ease-in;
+  -moz-animation: opc 2.0s ease-in;
+  animation: opc 2.0s ease-in;
+  animation-fill-mode: forwards;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.top {
+  width: 100%;
+  height: 2px;
+  top: 11px;
+}
+
+.back {
+  -webkit-transform: rotate3d(0,1,0,-180deg) translate3d(0,0,1px);
+  -moz-transform: rotate3d(0,1,0,-180deg) translate3d(0,0,1px);
+  transform: rotate3d(0,1,0,-180deg) translate3d(0,0,1px);
+}
+
+
+
+.top {
+  -webkit-transform: rotate3d(1,0,0,90deg);
+  -moz-transform: rotate3d(1,0,0,90deg);
+  transform: rotate3d(1,0,0,90deg);
+}
+
+
+.back {
+  z-index: 1;
+}
+
+.front {
+  background-color: #fff;
+}
+.back {
+  background-color: #999;
+}
+.top {
+  background-color: #999;
+}
+
+.viewback {
+  -webkit-transform-origin: center center;
+  -webkit-transform: rotate3d(0,1,0,180deg) translate3d(0,0,0px);
+  -moz-transform: rotate3d(0,1,0,180deg) translate3d(0,0,0px);
+  transform: rotate3d(0,1,0,180deg) translate3d(0,0,0px);
+}
+
+.bottom {
+  background: #777;
+  border: 2px solid #777;
+  border-radius: 0 0 1em 1em;
+  content: " ";
+  display: block;
+  position: absolute;
+  padding: 0.3em;
+  left: -32px;
+  top: 257px;
+  z-index: 100;
+  width: 486px;
+  box-shadow: 0 3px 4px #DFDFDF;
+}
+
+.bottom:before {
+background: #fff;
+  border-radius: 0 0 0.3em 0.3em;
+  content: " ";
+  display: block;
+  position: absolute;
+  padding: 0.15em 2.45em;
+  left: 43%;
+  /* bottom: 0; */
+  z-index: 101;
+  top: 0px;
+}
+
+#screen{
+  height: 225px; 
+  font-family: 'Source Sans Pro', sans-serif; 
+  font-weight: 100;
+  color:#7CFC00;
+  background: black;
+}
+.screen-off{
+  visibility: hidden;
+}
+
+.arrow{
+    position: fixed;
+    margin: 0 auto;
+    display: block;
+    left: 50%;
+    bottom: 15px;
+    text-decoration: none;
+    color: #7CFC00;
+    font-size: 2em;
+}
+a.arrow:hover, a.arrow:focus{
+  text-decoration: none;
+  color: #7CFC00;
+}
+/* ANIM */
+
+@keyframes spin {
+  from {
+    transform: rotateX(-81deg);}
+  to {
+    transform: rotateX(0deg);}
+}
+
+@-webkit-keyframes spin {
+  from {-webkit-transform: rotateX(-79deg);}
+  to {-webkit-transform: rotateX(0deg);}
+}
+
+@-moz-keyframes spin {
+  from {-moz-transform: rotateX(-81deg);
+  }
+  to {-moz-transform: rotateX(0deg);}
+}
+
+@-ms-keyframes spin {
+  from {-o-transform: rotateX(-81deg);}
+  to {-o-transform: rotateX(0deg);}
+}
+
+@-webkit-keyframes bg_n {
+  from {background-color: #ccc;}
+  to {background-color: #fff;}
+}
+
+@-moz-keyframes bg_n {
+  from {background-color: #ccc;}
+  to {background-color: #fff;}
+}
+
+@keyframes bg_n {
+  from {background-color: #ccc;}
+  to {background-color: #fff;}
+}
+
+@keyframes opc {
+    0%   {opacity: 0;}
+    25%  {opacity: 0;}
+    50%  {opacity: 0;}
+    85%  {opacity: 0;}
+    100% {topacity: 1;}
+}
+
+@-moz-keyframes opc {
+    0%   {opacity: 0;}
+    25%  {opacity: 0;}
+    50%  {opacity: 0;}
+    85%  {opacity: 0;}
+    100% {topacity: 1;}
+}
+
+@-webkit-keyframes opc {
+    0%   {opacity: 0;}
+    25%  {opacity: 0;}
+    50%  {opacity: 0;}
+    85%  {opacity: 0;}
+    100% {topacity: 1;}
 }

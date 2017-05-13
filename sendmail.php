@@ -8,8 +8,8 @@
                   $mail->Host       = "smtp.gmail.com";                  
                   $mail->SMTPAuth   = true;
                   $mail->Port       = 587;
-                  $mail->Username   = "kaushik.iitmadras@gmail.com";
-                  $mail->Password   = "eequalsmcsquare";
+                  $mail->Username   = "";
+                  $mail->Password   = "";
                   $mail->SMTPSecure = 'tls';
                   $mail->SetFrom('kaushik.iitmadras@gmail.com', 'Kaushik Karambelkar');
                   $mail->AddReplyTo("kaushik.iitmadras@gmail.com","Kaushik Karambelkar");
