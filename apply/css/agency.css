@@ -244,15 +244,15 @@ header .intro-text {
 header .intro-text .intro-lead-in {
   font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
-  font-size: 22px;
-  line-height: 22px;
+  font-size: 26px;
+  line-height: 26px;
   margin-bottom: 25px;
 }
 header .intro-text .intro-heading {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 50px;
+  font-size: 37px;
   line-height: 50px;
   margin-bottom: 25px;
 }
@@ -265,7 +265,7 @@ header .intro-text .intro-heading {
     font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: italic;
     font-size: 45px;
-    line-height: 40px;
+    line-height: 45px;
     margin-bottom: 25px;
   }
   header .intro-text .intro-heading {
@@ -456,9 +456,21 @@ section h3.section-subheading {
   margin-top: 0;
   color: inherit;
 }
-.timeline .timeline-heading h4.subheading {
+.timeline .timeline-heading h5.subheading {
   text-transform: none;
+  color: #777777;
+  font-size: 16px;
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: none;
+  font-style: italic;
+  font-weight: 400;
 }
+
+p.exp
+{
+	text-align: justify;
+}
+
 .timeline .timeline-body > p,
 .timeline .timeline-body > ul {
   margin-bottom: 0;
@@ -472,7 +484,7 @@ section h3.section-subheading {
     min-height: 100px;
   }
   .timeline > li .timeline-panel {
-    width: 41%;
+    width: 61%;
     float: left;
     padding: 0 20px 20px 30px;
     text-align: right;
@@ -743,4 +755,9 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: #fed136;
+}
+
+ul.timeline li
+{
+	background-color: rgba(255,255,255,1);
 }
