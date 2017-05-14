@@ -106,7 +106,7 @@ fieldset[disabled] .btn-primary.active {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  border-radius: 3px;
+  border-radius: 8px;
   font-size: 18px;
   padding: 20px 40px;
 }
@@ -759,5 +759,47 @@ body {
 
 ul.timeline li
 {
-	background-color: rgba(255,255,255,1);
+	background-color: rgba(255,255,255,0.7);
+}
+
+.justified
+{
+	text-align: justify;
+}
+
+div.whydivglow div.col-md-4, ul.whydivglow div.timeline-body
+{
+	transition: all 0.5s ease-in-out;
+	border-radius: 3px;
+}
+
+div.whydivglow div.col-md-4:hover, ul.whydivglow div.timeline-body:hover
+{
+	transition: all 0.2s ease-in-out;
+	background-color: #eeeeee;
+}
+section h3.team-name {
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 0px;
+  text-align: center;
+}
+section h3.namesubtext {
+  font-size: 19px;
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: none;
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+
+section h3.contactus {
+  font-size: 16px;
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: none;
+  color: #aaa; 
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 75px;
 }
